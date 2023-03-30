@@ -1,6 +1,9 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { timer } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -11,6 +14,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class HomePage {
+  public timer: number = 120;
+  private subscription: Subscription | any;
 
   @ViewChild('audioPlayer') audioPlayer!: ElementRef;
   colorring1 : any
@@ -23,7 +28,19 @@ export class HomePage {
   background:any
 
   getpoint : any = []
-  constructor() {}
+  constructor() {
+
+    const source = timer(1000, 1000);
+    this.subscription = source.subscribe(val => {      
+      this.timer--;
+      if (this.timer === 0) {
+        this.subscription.unsubscribe();
+        alert('Timer has ended!'); 
+        location.reload(); 
+      }
+    });
+  
+  }
 
 
   ringbackrount(value :any , points : any , diagram :any){
@@ -33,19 +50,18 @@ export class HomePage {
       this.getpoint.push({"total" : getpoints})
       console.log(this.getpoint);
       
-      // this.playAudio()
-      alert(points)
+      this.playAudio()
       this.colorring1 = true
       this.colorring2 = false
       this.colorring3 = false
       this.colorring4 = false
       this.colorring5 = false
       this.colorring6 = false
+      alert(points)
 
     }
     else if(value == 'ring2'){
-      // this.playAudio()
-      alert(points)
+      this.playAudio()
       let getpoints = points
       this.getpoint.push({"total" : getpoints})
       console.log(this.getpoint);
@@ -55,11 +71,12 @@ export class HomePage {
       this.colorring4 = false
       this.colorring5 = false
       this.colorring6 = false
+      alert(points)
+
 
     }
     else if(value == 'ring3'){
-      // this.playAudio()
-      alert(points)
+      this.playAudio()
       let getpoints = points
       this.getpoint.push({"total" : getpoints})
       console.log(this.getpoint);
@@ -69,11 +86,12 @@ export class HomePage {
       this.colorring4 = false
       this.colorring5 = false
       this.colorring6 = false
+      alert(points)
+
 
     }
     else if(value == 'ring4'){
-      // this.playAudio()
-      alert(points)
+      this.playAudio()
       let getpoints = points
       this.getpoint.push({"total" : getpoints})
       console.log(this.getpoint);
@@ -83,11 +101,12 @@ export class HomePage {
       this.colorring4 = true
       this.colorring5 = false
       this.colorring6 = false
+      alert(points)
+
 
     }
     else if(value == 'ring5'){
-      // this.playAudio()
-      alert(points)
+      this.playAudio()
       let getpoints = points
       this.getpoint.push({"total" : getpoints})
       console.log(this.getpoint);
@@ -97,20 +116,22 @@ export class HomePage {
       this.colorring4 = false
       this.colorring5 = true
       this.colorring6 = false
+      alert(points)
+
 
     }
     else if(value == 'ring6'){
-      // this.playAudio()
+      this.playAudio()
       let getpoints = points
       this.getpoint.push({"total" : getpoints})
       console.log(this.getpoint);
-      alert(points)
       this.colorring1 = false
       this.colorring2 = false
       this.colorring3 = false
       this.colorring4 = false
       this.colorring5 = false
       this.colorring6 = true
+      alert(points)
 
     }
   }

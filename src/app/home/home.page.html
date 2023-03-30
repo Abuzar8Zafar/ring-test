@@ -4,7 +4,7 @@
 
 <ion-content>
 
-
+    <audio #audioPlayer [src]="'assets/audio/beep.mp3'"></audio>
     <div class="main_continer" style="position: relative;">
       <div class="ring1"  [ngClass]="{'background1':colorring1}"  (click)="ringbackrount('ring1' , '1', 'daigram1')"></div>
       <div class="ring2" [ngClass]="{'background2':colorring2}" (click)="ringbackrount('ring2','2', 'daigram1')"></div>
@@ -12,9 +12,18 @@
       <div class="ring4" [ngClass]="{'background4':colorring4}"  (click)="ringbackrount('ring4' , '4', 'daigram1')"></div>
       <div class="ring5" [ngClass]="{'background5':colorring5}" (click)="ringbackrount('ring5','5', 'daigram1')"></div>
       <div class="ring6" [ngClass]="{'background6':colorring6}" (click)="ringbackrount('ring6','8', 'daigram1')"></div>
-
     </div>
-    <audio #audioPlayer [src]="'assets/audio/beep.mp3'"></audio>
+    <div class="points">
+      <span style="color: black; text-align: center; display: flex; justify-content: start; align-items: center;" *ngFor="let data of getpoint">
+        {{data.total}},
+      </span>
+    </div>
+    <div class="points">
+      <span style="color: black; text-align: center; display: flex; justify-content: start; align-items: center;">{{timer}}</span>
+    </div>
+    
+
+
 
     
     
