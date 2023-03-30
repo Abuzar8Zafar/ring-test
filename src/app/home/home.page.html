@@ -6,17 +6,15 @@
 
 
     <div class="main_continer" style="position: relative;">
-      <div class="ring1"  [ngClass]="{'background1':colorring1}"  (click)="ringbackrount('ring1')"><span style="color: black;">1</span></div>
-      <div class="ring2" [ngClass]="{'background2':colorring2}" (click)="ringbackrount('ring2')"><span style="color: black;">2</span></div>
-      <div class="ring3"  [ngClass]="{'background3':colorring3}"   (click)="ringbackrount('ring3')"><span style="color: black;">3</span></div>
-      <div class="ring4" [ngClass]="{'background4':colorring4}"  (click)="ringbackrount('ring4')"><span style="color: black;">4</span></div>
-      <div class="ring5" [ngClass]="{'background5':colorring5}" (click)="ringbackrount('ring5')"><span style="color: black;">5</span></div>
-      <div class="ring6" [ngClass]="{'background6':colorring6}" (click)="ringbackrount('ring6')"><span style="color: black;">6</span></div>
+      <div class="ring1"  [ngClass]="{'background1':colorring1}"  (click)="ringbackrount('ring1' , '1', 'daigram1')"></div>
+      <div class="ring2" [ngClass]="{'background2':colorring2}" (click)="ringbackrount('ring2','2', 'daigram1')"></div>
+      <div class="ring3"  [ngClass]="{'background3':colorring3}"   (click)="ringbackrount('ring3','3', 'daigram1')"></div>
+      <div class="ring4" [ngClass]="{'background4':colorring4}"  (click)="ringbackrount('ring4' , '4', 'daigram1')"></div>
+      <div class="ring5" [ngClass]="{'background5':colorring5}" (click)="ringbackrount('ring5','5', 'daigram1')"></div>
+      <div class="ring6" [ngClass]="{'background6':colorring6}" (click)="ringbackrount('ring6','8', 'daigram1')"></div>
 
     </div>
-
     <audio #audioPlayer [src]="'assets/audio/beep.mp3'"></audio>
-    <!-- <ion-button (click)="playAudio()">Play</ion-button> -->
 
     
     

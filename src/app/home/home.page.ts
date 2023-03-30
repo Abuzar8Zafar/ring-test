@@ -21,14 +21,20 @@ export class HomePage {
   colorring6 :any
 
   background:any
+
+  getpoint : any = []
   constructor() {}
 
 
-  ringbackrount(value :any){
-    console.log(value);
-    
+  ringbackrount(value :any , points : any , diagram :any){
+
     if(value == 'ring1'){
-      this.playAudio()
+      let getpoints = points
+      this.getpoint.push({"total" : getpoints})
+      console.log(this.getpoint);
+      
+      // this.playAudio()
+      alert(points)
       this.colorring1 = true
       this.colorring2 = false
       this.colorring3 = false
@@ -38,7 +44,11 @@ export class HomePage {
 
     }
     else if(value == 'ring2'){
-      this.playAudio()
+      // this.playAudio()
+      alert(points)
+      let getpoints = points
+      this.getpoint.push({"total" : getpoints})
+      console.log(this.getpoint);
       this.colorring1 = false
       this.colorring2 = true
       this.colorring3 = false
@@ -48,7 +58,11 @@ export class HomePage {
 
     }
     else if(value == 'ring3'){
-      this.playAudio()
+      // this.playAudio()
+      alert(points)
+      let getpoints = points
+      this.getpoint.push({"total" : getpoints})
+      console.log(this.getpoint);
       this.colorring1 = false
       this.colorring2 = false
       this.colorring3 = true
@@ -58,7 +72,11 @@ export class HomePage {
 
     }
     else if(value == 'ring4'){
-      this.playAudio()
+      // this.playAudio()
+      alert(points)
+      let getpoints = points
+      this.getpoint.push({"total" : getpoints})
+      console.log(this.getpoint);
       this.colorring1 = false
       this.colorring2 = false
       this.colorring3 = false
@@ -68,7 +86,11 @@ export class HomePage {
 
     }
     else if(value == 'ring5'){
-      this.playAudio()
+      // this.playAudio()
+      alert(points)
+      let getpoints = points
+      this.getpoint.push({"total" : getpoints})
+      console.log(this.getpoint);
       this.colorring1 = false
       this.colorring2 = false
       this.colorring3 = false
@@ -78,7 +100,11 @@ export class HomePage {
 
     }
     else if(value == 'ring6'){
-      this.playAudio()
+      // this.playAudio()
+      let getpoints = points
+      this.getpoint.push({"total" : getpoints})
+      console.log(this.getpoint);
+      alert(points)
       this.colorring1 = false
       this.colorring2 = false
       this.colorring3 = false
