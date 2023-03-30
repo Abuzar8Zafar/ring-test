@@ -1,27 +1,98 @@
-#container {
-  text-align: center;
+.center_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.ring1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.ring2 {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid black;
   position: absolute;
-  left: 0;
-  right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  background-color: white;
+
+  transform: translate(-50%, -50%);
+}
+.ring3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  background-color: white;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ring4 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+
+  transform: translate(-50%, -50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.ring5 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+
+  transform: translate(-50%, -50%);
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.ring6 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
 }
 
-#container a {
-  text-decoration: none;
+.background1 {
+  background-color: green;
+}
+.background2 {
+  background-color: green;
+}
+.background3 {
+  background-color: green;
+}
+.background4 {
+  background-color: green;
+}
+
+.background5 {
+  background-color: red;
+}
+.background6 {
+  background-color: red;
 }

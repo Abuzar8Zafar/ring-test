@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+ 
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+    <div class="main_continer" style="position: relative;">
+      <div class="ring1"  [ngClass]="{'background1':colorring1}"  (click)="ringbackrount('ring1')"><span style="color: black;">1</span></div>
+      <div class="ring2" [ngClass]="{'background2':colorring2}" (click)="ringbackrount('ring2')"><span style="color: black;">2</span></div>
+      <div class="ring3"  [ngClass]="{'background3':colorring3}"   (click)="ringbackrount('ring3')"><span style="color: black;">3</span></div>
+      <div class="ring4" [ngClass]="{'background4':colorring4}"  (click)="ringbackrount('ring4')"><span style="color: black;">4</span></div>
+      <div class="ring5" [ngClass]="{'background5':colorring5}" (click)="ringbackrount('ring5')"><span style="color: black;">5</span></div>
+      <div class="ring6" [ngClass]="{'background6':colorring6}" (click)="ringbackrount('ring6')"><span style="color: black;">6</span></div>
+
+    </div>
+
+    <audio #audioPlayer [src]="'assets/audio/beep.mp3'"></audio>
+    <!-- <ion-button (click)="playAudio()">Play</ion-button> -->
+
+    
+    
+   
+ 
 </ion-content>
